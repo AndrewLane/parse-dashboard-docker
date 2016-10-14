@@ -24,7 +24,7 @@ var app = express();
 // make the Parse Dashboard available at root /
 app.use('/', dashboard);
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 4040;
 var httpServer = http.createServer(app);
 httpServer.listen(port, function () {
     console.log('parse-dashboard running on port ' + port);
