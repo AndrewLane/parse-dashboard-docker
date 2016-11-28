@@ -21,6 +21,11 @@ var dashboard = new ParseDashboard({
 
 var app = express();
 
+// route that will just return a version
+app.get('/version', function(req, res) {
+  res.status(200).send('1.0.0');
+});
+
 // make the Parse Dashboard available at root /
 app.use('/', dashboard);
 
