@@ -23,7 +23,7 @@ var app = express();
 
 // route that will just return a version
 app.get('/version', function(req, res) {
-  res.status(200).send('1.0.0');
+  res.status(200).send('1.0.1');
 });
 
 // make the Parse Dashboard available at root /
