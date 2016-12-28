@@ -23,7 +23,12 @@ var app = express();
 
 // route that will just return a version
 app.get('/version', function(req, res) {
-  res.status(200).send('1.0.1');
+  res.status(200).send('1.0.2');
+});
+
+// route that will do a rudimentary health check
+app.get('/healthcheck', function(req, res) {
+  res.status(200).send('Health check passed');
 });
 
 // make the Parse Dashboard available at root /
