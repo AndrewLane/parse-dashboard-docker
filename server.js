@@ -23,7 +23,7 @@ var app = express();
 
 // route that will just return a version
 app.get('/version', function(req, res) {
-  res.status(200).send('1.0.2');
+  res.status(200).send('1.0.3');
 });
 
 // route that will do a rudimentary health check
