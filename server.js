@@ -9,6 +9,7 @@ var dashboard = new ParseDashboard({
             masterKey: process.env.MASTER_KEY,
             serverURL: process.env.SERVER_URL,
             appName: process.env.APP_NAME,
+            production: process.env.IS_APP_PRODUCTION || false
         },
     ],
     users: [
@@ -23,7 +24,7 @@ var app = express();
 
 // route that will just return a version
 app.get('/version', function(req, res) {
-  res.status(200).send('1.0.3');
+  res.status(200).send('1.0.4');
 });
 
 // route that will do a rudimentary health check
